@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>王德轩 - 个人简历</title>
+<style>
+:root{--font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;--color-primary:#4F46E5;--color-primary-light:#6366F1;--color-primary-dark:#3730A3;--color-accent:#F59E0B;--color-accent-dark:#D97706;--bg-body:#F9FAFB;--bg-card:#FFFFFF;--bg-nav:rgba(255,255,255,.92);--bg-hero:linear-gradient(160deg,#EEF2FF 0%,#E0E7FF 30%,#FDF2F8 70%,#FFF7ED 100%);--text-primary:#111827;--text-secondary:#4B5563;--text-tertiary:#9CA3AF;--border-color:#E5E7EB;--shadow-sm:0 1px 2px rgba(0,0,0,.04);--shadow-md:0 4px 16px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);--shadow-lg:0 12px 32px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.04);--shadow-xl:0 24px 48px rgba(0,0,0,.1),0 4px 12px rgba(0,0,0,.05);--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;--radius-full:9999px;--transition-fast:150ms cubic-bezier(.4,0,.2,1);--transition-smooth:250ms cubic-bezier(.4,0,.2,1);--transition-spring:350ms cubic-bezier(.34,1.56,.64,1);--max-width:1080px;--nav-height:60px}
+[data-theme="dark"]{--bg-body:#0F172A;--bg-card:#1E293B;--bg-nav:rgba(15,23,42,.92);--bg-hero:linear-gradient(160deg,#0F172A 0%,#1E1B4B 30%,#1E293B 60%,#0F172A 100%);--text-primary:#F1F5F9;--text-secondary:#CBD5E1;--text-tertiary:#64748B;--border-color:#334155;--shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 4px 16px rgba(0,0,0,.3),0 1px 3px rgba(0,0,0,.2);--shadow-lg:0 12px 32px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.2);--shadow-xl:0 24px 48px rgba(0,0,0,.4),0 4px 12px rgba(0,0,0,.25)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg-body:#0F172A;--bg-card:#1E293B;--bg-nav:rgba(15,23,42,.92);--bg-hero:linear-gradient(160deg,#0F172A 0%,#1E1B4B 30%,#1E293B 60%,#0F172A 100%);--text-primary:#F1F5F9;--text-secondary:#CBD5E1;--text-tertiary:#64748B;--border-color:#334155;--shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 4px 16px rgba(0,0,0,.3),0 1px 3px rgba(0,0,0,.2);--shadow-lg:0 12px 32px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.2);--shadow-xl:0 24px 48px rgba(0,0,0,.4),0 4px 12px rgba(0,0,0,.25)}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-height) + 20px);font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+body{font-family:var(--font-sans);background-color:var(--bg-body);color:var(--text-primary);line-height:1.65;transition:background-color var(--transition-smooth),color var(--transition-smooth);min-height:100vh;position:relative;overflow-x:hidden}
+body::before{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 25% 15%,rgba(79,70,229,.06) 0%,transparent 55%),radial-gradient(ellipse at 75% 60%,rgba(245,158,11,.04) 0%,transparent 55%),radial-gradient(ellipse at 50% 90%,rgba(79,70,229,.03) 0%,transparent 50%);pointer-events:none;z-index:0;transition:background var(--transition-smooth)}
+.nav-bar{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-height);background:var(--bg-nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border-color);display:flex;align-items:center;justify-content:center;padding:0 16px;transition:all var(--transition-smooth);box-shadow:var(--shadow-sm)}
+.nav-inner{width:100%;max-width:var(--max-width);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-brand{font-weight:700;font-size:1rem;color:var(--color-primary);white-space:nowrap;letter-spacing:-.01em;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding:4px 0}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{display:inline-block;padding:12px 14px;font-size:.8rem;font-weight:500;color:var(--text-secondary);text-decoration:none;border-radius:var(--radius-full);transition:all var(--transition-fast);white-space:nowrap;letter-spacing:.01em;touch-action:manipulation}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--color-primary);background:rgba(79,70,229,.06);outline:none}
+.nav-links a:focus-visible{box-shadow:0 0 0 2px var(--color-primary-light)}
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.btn-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:var(--radius-full);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-secondary);cursor:pointer;transition:all var(--transition-fast);font-size:1rem;flex-shrink:0;touch-action:manipulation}
+.btn-icon:hover{background:var(--color-primary);color:#fff;border-color:var(--color-primary);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.btn-print{display:inline-flex;align-items:center;gap:6px;padding:12px 16px;border-radius:var(--radius-full);border:1px solid var(--color-primary);background:var(--color-primary);color:#fff;cursor:pointer;font-size:.8rem;font-weight:600;white-space:nowrap;transition:all var(--transition-fast);letter-spacing:.01em;touch-action:manipulation}
+.btn-print:hover{background:var(--color-primary-dark);border-color:var(--color-primary-dark);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.main-container{position:relative;z-index:1;max-width:var(--max-width);margin:0 auto;padding:calc(var(--nav-height) + 20px) 16px 40px}
+.hero-section{background:var(--bg-hero);border-radius:var(--radius-xl);padding:32px 20px;margin-bottom:24px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border-color);transition:all var(--transition-smooth)}
+.hero-section::after{content:'';position:absolute;top:-80px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(79,70,229,.07) 0%,transparent 70%);pointer-events:none}
+.hero-section::before{content:'';position:absolute;bottom:-40px;left:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.06) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:1}
+.hero-avatar-row{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:20px}
+.hero-avatar{width:80px;height:80px;border-radius:50%;overflow:hidden;background:#E0E7FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(79,70,229,.25);border:3px solid #fff}
+.hero-avatar img{width:100%;height:100%;object-fit:cover;display:block;loading:lazy;decoding:async}
+.hero-name-block h1{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:var(--text-primary);line-height:1.2}
+.hero-name-block .hero-subtitle{font-size:.85rem;color:var(--text-secondary);margin-top:4px;font-weight:500}
+.hero-bio{font-size:.9rem;color:var(--text-secondary);max-width:680px;line-height:1.6;margin-bottom:16px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.badge{display:inline-block;padding:8px 14px;font-size:.75rem;font-weight:600;border-radius:var(--radius-full);background:var(--bg-card);color:var(--color-primary);border:1px solid rgba(79,70,229,.2);transition:all var(--transition-fast);white-space:nowrap}
+.badge.accent{color:var(--color-accent-dark);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.04)}
+.hero-contact-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn-contact{display:inline-flex;align-items:center;gap:7px;padding:14px 20px;border-radius:var(--radius-full);font-size:.85rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all var(--transition-fast);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);letter-spacing:.01em;touch-action:manipulation}
+.btn-contact:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--color-primary-light)}
+.btn-contact.primary{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.highlights-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+.highlight-card{background:var(--bg-card);border-radius:var(--radius-lg);padding:16px 14px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);transition:all var(--transition-smooth);cursor:default}
+.highlight-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--color-primary-light)}
+.highlight-card .hl-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+.highlight-card .hl-value{font-size:1.25rem;font-weight:800;color:var(--color-primary);letter-spacing:-.02em;line-height:1.2}
+.highlight-card .hl-label{font-size:.75rem;color:var(--text-secondary);margin-top:4px;line-height:1.4}
+.section-heading{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:1.1rem;font-weight:700;color:var(--text-primary)}
+.section-heading .section-icon{width:32px;height:32px;border-radius:var(--radius-sm);background:rgba(79,70,229,.1);display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.section-block{margin-bottom:24px}
+.tab-nav{display:flex;gap:2px;border-bottom:2px solid var(--border-color);margin-bottom:14px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.tab-nav::-webkit-scrollbar{display:none}
+.tab-btn{padding:12px 16px;font-size:.8rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-tertiary);border-bottom:3px solid transparent;transition:all var(--transition-fast);white-space:nowrap;border-radius:4px 4px 0 0;position:relative;bottom:-2px;touch-action:manipulation}
+.tab-btn.active{color:var(--color-primary);border-bottom-color:var(--color-primary)}
+.tab-panel{display:none;animation:fadeSlideIn .3s ease}
+.tab-panel.active{display:block}
+@keyframes fadeSlideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--bg-card);border-radius:var(--radius-lg);padding:18px 16px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);transition:all var(--transition-smooth);margin-bottom:12px}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.card-title{font-weight:700;font-size:.95rem;color:var(--text-primary)}
+.card-subtitle{font-size:.8rem;color:var(--text-secondary);font-weight:500}
+.card-meta{font-size:.72rem;color:var(--text-tertiary);white-space:nowrap}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{display:inline-block;padding:4px 10px;font-size:.7rem;font-weight:600;border-radius:var(--radius-full);background:rgba(79,70,229,.07);color:var(--color-primary);white-space:nowrap}
+.card-list{list-style:none;padding:0;margin:0}
+.card-list li{position:relative;padding-left:18px;margin-bottom:6px;font-size:.82rem;color:var(--text-secondary);line-height:1.5}
+.card-list li::before{content:'▸';position:absolute;left:0;color:var(--color-primary);font-size:.7rem;font-weight:700;line-height:1.5}
+.card-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:8px 14px;font-size:.75rem;font-weight:600;border-radius:var(--radius-full);background:rgba(79,70,229,.08);color:var(--color-primary);text-decoration:none;border:1px solid rgba(79,70,229,.2);transition:all var(--transition-fast)}
+.card-link:hover{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.project-card{background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);overflow:hidden;transition:all var(--transition-smooth);display:flex;flex-direction:column}
+.project-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--color-primary-light)}
+.project-card-img{height:100px;background:linear-gradient(135deg,#EEF2FF 0%,#E0E7FF 50%,#DDD6FE 100%);display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--color-primary-light);flex-shrink:0}
+.project-card-body{padding:14px 16px;flex:1}
+.project-card-body .card-title{margin-bottom:4px}
+.project-card-body .card-subtitle{margin-bottom:6px}
+.skills-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.skill-category{background:var(--bg-card);border-radius:var(--radius-lg);padding:14px 16px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);transition:all var(--transition-smooth)}
+.skill-cat-title{font-weight:700;font-size:.82rem;color:var(--text-primary);margin-bottom:10px}
+.skill-badges{display:flex;flex-wrap:wrap;gap:6px}
+.skill-badge{display:inline-block;padding:5px 12px;font-size:.72rem;font-weight:500;border-radius:var(--radius-full);background:rgba(79,70,229,.06);color:var(--color-primary);border:1px solid transparent}
+.skill-badge.strong{background:rgba(79,70,229,.14);font-weight:600;border-color:rgba(79,70,229,.2)}
+.cert-group-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.cert-group-card{background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);padding:14px 16px;transition:all var(--transition-smooth)}
+.cert-group-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-weight:700;font-size:.85rem}
+.group-icon{width:28px;height:28px;border-radius:var(--radius-sm);background:rgba(79,70,229,.1);display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.cert-group-text{list-style:none;padding:0;margin:0 0 8px 0}
+.cert-group-text li{font-size:.75rem;color:var(--text-secondary);padding-left:14px;position:relative;margin-bottom:4px}
+.cert-group-text li::before{content:'▸';position:absolute;left:0;color:var(--color-primary);font-size:.65rem}
+.cert-group-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:6px}
+.cert-img-thumb{position:relative;width:100%;padding-bottom:100%;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border-color);cursor:pointer;transition:all var(--transition-fast);background:var(--border-light);touch-action:manipulation}
+.cert-img-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;loading:lazy;decoding:async}
+.lightbox-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity var(--transition-smooth)}
+.lightbox-overlay.active{opacity:1;pointer-events:auto}
+.lightbox-content{max-width:90vw;max-height:90vh;position:relative}
+.lightbox-content img{max-width:90vw;max-height:90vh;border-radius:var(--radius-md);box-shadow:var(--shadow-xl);display:block}
+.lightbox-close{position:absolute;top:-16px;right:-16px;width:40px;height:40px;border-radius:50%;background:#fff;border:none;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#111;box-shadow:var(--shadow-lg)}
+.back-to-top{position:fixed;bottom:20px;right:20px;z-index:999;width:48px;height:48px;border-radius:50%;background:var(--color-primary);color:#fff;border:none;cursor:pointer;font-size:1.2rem;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transform:translateY(16px);transition:all var(--transition-spring);display:flex;align-items:center;justify-content:center;touch-action:manipulation}
+.back-to-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.site-footer{text-align:center;padding:20px 16px;font-size:.72rem;color:var(--text-tertiary);border-top:1px solid var(--border-color);margin-top:16px}
+.copy-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#1F2937;color:#fff;padding:10px 22px;border-radius:var(--radius-full);font-size:.8rem;font-weight:600;pointer-events:none;opacity:0;transition:all var(--transition-spring);z-index:2000}
+.copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (min-width:768px){
+.nav-brand{font-size:1.15rem}
+.nav-links a{font-size:.875rem;padding:7px 14px}
+.btn-icon{width:36px;height:36px;font-size:1rem}
+.btn-print{padding:8px 16px;font-size:.85rem}
+.main-container{padding:calc(var(--nav-height) + 24px) 20px 60px}
+.hero-section{padding:48px 40px 40px;border-radius:var(--radius-xl)}
+.hero-avatar-row{flex-direction:row;align-items:center;gap:20px}
+.hero-avatar{width:96px;height:96px}
+.hero-name-block h1{font-size:2rem}
+.hero-bio{font-size:1rem}
+.highlights-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+.highlight-card{padding:20px 18px}
+.highlight-card .hl-value{font-size:1.5rem}
+.section-heading{font-size:1.25rem;margin-bottom:18px}
+.card{padding:22px 24px}
+.card-title{font-size:1.05rem}
+.card-list li{font-size:.9rem}
+.projects-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+.project-card-img{height:130px;font-size:2.5rem}
+.skills-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+.skill-category{padding:18px 20px}
+.cert-group-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+.cert-group-card{padding:18px 20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.card:hover,.highlight-card:hover,.project-card:hover,.skill-category:hover,.cert-group-card:hover,.cert-img-thumb:hover{transform:none!important}}
+@media print{@page{margin:1.2cm;size:A4}body{background:#fff!important;color:#111!important;font-size:11pt!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}body::before{display:none!important}.nav-bar,.back-to-top,.btn-print,.btn-icon,.copy-toast,.lightbox-overlay,.cert-img-thumb,.hero-contact-row .btn-contact:not(.primary){display:none!important}.hero-section{background:#fff!important;border:1px solid #ddd!important;box-shadow:none!important;padding:24px!important;border-radius:8px!important}.hero-avatar{box-shadow:none!important;border:1px solid #ddd!important}.card,.highlight-card,.skill-category,.project-card,.cert-group-card{box-shadow:none!important;border:1px solid #e0e0e0!important;break-inside:avoid;page-break-inside:avoid;transform:none!important;background:#fff!important}.tab-panel{display:block!important;animation:none!important;opacity:1!important}.tab-nav{display:none!important}.main-container{max-width:100%;padding:0!important;margin:0!important}.highlight-card .hl-value{color:#111!important}.badge,.tag,.skill-badge{border:1px solid #ccc!important;background:#f5f5f5!important;color:#333!important}.hero-section::after,.hero-section::before{display:none!important}.project-card-img{background:#f0f0f0!important;max-height:70px!important}.cert-group-images{display:none!important}.site-footer{border-top:1px solid #ddd!important}}
+</style>
+</head>
+<body>
+<nav class="nav-bar" aria-label="主导航">
+<div class="nav-inner">
+<span class="nav-brand">王德轩</span>
+<div class="nav-links" role="tablist">
+<a href="#hero" role="tab">摘要</a><a href="#highlights" role="tab">亮点</a><a href="#experience" role="tab">经历</a><a href="#projects" role="tab">项目</a><a href="#skills" role="tab">技能</a><a href="#education-cert" role="tab">教育&证书</a>
+</div>
+<div class="nav-actions">
+<button class="btn-icon" id="themeToggle" aria-label="切换深色/浅色模式">🌓</button>
+<button class="btn-print" id="printBtn" aria-label="打印简历"><span>🖨️</span> 打印</button>
+</div>
+</div>
+</nav>
+<main class="main-container" id="mainContent"></main>
+<button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+<div class="copy-toast" id="copyToast" aria-live="polite">📋 邮箱已复制到剪贴板</div>
+<div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true">
+<div class="lightbox-content">
+<button class="lightbox-close" id="lightboxClose" aria-label="关闭预览">×</button>
+<img id="lightboxImg" src="" alt="预览图片">
+</div>
+</div>
+<footer class="site-footer">© 2026 王德轩 | 更新于 2026年8月 | 本页面为个人简历在线版</footer>
+<script defer>
+(function(){
+const resume={name:'王德轩',phone:'15350990322',emailUser:'wdx1.13',emailDomain:'qq.com',title:'物联网工程 · 本科在读',university:'大连工程学院',college:'电气与自动化学院',major:'物联网工程',degree:'本科',period:'2026.09 – 2030.06（预期）',avatar:'头像.png',douyinImage:'c3e65bc39a1426f3e2a4af3598792c05.jpg',courses:['物联网导论','传感器原理','嵌入式系统设计','数据结构与算法','Python程序设计','计算机网络','机器学习基础','数据库原理'],bio:'准大一新生，AI实践者与青年创业者。熟练运用AI工具链，持有阿里云、腾讯云、科大讯飞、华为、Clouder等多家平台认证。能够独立完成完整PPT的策划、逻辑梳理与美化排版，懂得如何用清晰直观的方式呈现成果。在成长过程中，参加了很多竞赛均获得不错的成绩。性格上我沉稳务实，有较强的执行力，遇到困难不会轻易退缩，愿意虚心听取他人建议，具备良好的合作意识。',highlights:[{icon:'💰',value:'1万+',label:'创业净收入\n（补习班+音乐机构）'},{icon:'👥',value:'40+',label:'累计培养学员\n（音乐培训）'},{icon:'📈',value:'98%',label:'家长满意度\n（补习班运营）'},{icon:'🎤',value:'省级',label:'声乐比赛一等奖\n（最高奖项）'},{icon:'🤖',value:'5+',label:'AI平台认证\n（阿里/腾讯/华为等）'},{icon:'📊',value:'20+',label:'自制PPT作品\n（运营/教学/竞赛）'},{icon:'🎬',value:'50+',label:'剪辑视频作品\n（抖音/宣传/教学）'},{icon:'🏆',value:'10+',label:'竞赛经历\n（机器人/数学/音乐等）'}],experience:[{company:'系部新生入学建议项目组',role:'核心成员 / 内容策划',period:'2026.07 – 2026.08',type:'work',highlights:['联合系导员、学长学姐及学生会干部共同策划“新生入学建议”专题内容，覆盖学业规划、校园生活、社团选择等5大板块。','负责采访高年级优秀学生，整理新生常见问题，撰写并排版图文内容，最终由系公众号发布。','推文发布后阅读量达1500+，转发收藏量200+，被系部作为官方新生指导材料推广。','协调多方意见，确保内容准确实用，获导员与学生会一致好评。'],tags:['团队协作','内容策划','新生指导','公众号运营'],link:'https://mp.weixin.qq.com/s/pSbFPxFkBLy7Jk3zvGDxWw'},{company:'独立创业项目 · 小型补习班',role:'创始人 / 运营负责人',period:'2026.06 – 2026.08',type:'work',highlights:['主导补习班从0到1全流程搭建，负责招生宣传、课程定价、家长沟通、教师团队协调与财务管理。','设计线上线下结合招生方案，通过社群运营与口碑裂变，累计招收学员30+人，净收入超1万元。','建立标准化教学反馈机制，定期收集家长与学生意见，家长满意度达98%，获得大量好评与转介绍。','带领学霸教师团队分工协作，制定教学计划与课后辅导方案，复购意愿率超80%。','创新引入AI工具辅助文案、海报生成与学情分析，招生转化率提升约25%。'],tags:['创业运营','招生转化','团队管理','AI赋能']},{company:'小型音乐培养机构',role:'创始人 / 主理人',period:'2024.09 – 至今',type:'work',highlights:['独立创办音乐培训工作室，教授钢琴与吉他课程，累计培养学员40+人，长期稳定学员15+人。','设计个性化教学体系，结合学员年龄与基础定制练习方案，学员考级通过率达95%。','负责日常运营、课程排期、家长维护与续费管理，实现稳定月均收入，持续经营超1年。','探索AI在音乐教学中的应用，利用AI辅助乐谱生成与节奏训练，提升学员练习效率约30%。'],tags:['音乐培训','个性化教学','运营管理','AI+音乐']}],projects:[{name:'省级机器人竞赛项目',role:'核心成员',period:'小学阶段',icon:'🤖',highlights:['参与机器人设计与编程，负责机械结构搭建与基础逻辑调试，团队协作完成指定任务。','通过反复测试与优化传感器灵敏度，提升机器人任务完成稳定性。'],result:'最终获省级二等奖。',tags:['机器人','编程','团队协作']},{name:'多元领域研学实践',role:'参与者',period:'2024 – 2026 寒暑假',icon:'🌐',highlights:['参与AI、Python编程、理财、遥感等方向研学，系统学习各领域基础知识与实操技能。','在AI研学中完成小型图像分类与文本生成任务，掌握数据标注、模型训练与评估基本流程。','在Python研学中独立编写爬虫脚本与数据分析小程序，处理数据超5000条，实现自动化报表生成。','遥感研学中完成遥感影像基础分类实验，拓宽技术与应用视野。'],result:'建立跨学科技能基础，为AI与物联网融合实践提供支撑。',tags:['AI','Python','数据分析','遥感']},{name:'浪尖社区 AI 技能提升与认证计划',role:'活跃成员',period:'2026.07 – 至今',icon:'🚀',highlights:['加入青年成长社区，跟随多位导师系统学习AI应用、商业认知与英语能力提升课程。','在社区指导下，连续考取阿里云、腾讯云、科大讯飞、华为、Clouder等多家平台AI认证。','将AI知识即时应用于补习班运营与音乐教学，实现技术到生产力的高效转化。','参与社区内部分享与协作活动，与优秀同龄人共创积极学习氛围。'],result:'构建完整AI技能栈，认证数量5+，个人认知与执行力显著提升。',tags:['AI认证','社区学习','商业认知','持续成长']},{name:'AI编程与PPT制作技能实践',role:'独立实践',period:'2025.10 – 至今',icon:'💻',highlights:['熟练掌握AI辅助编程，使用Python完成多个小工具开发，如爬虫脚本、数据处理自动化程序。','独立制作运营与教学PPT 20+份，涵盖招生宣传、课程展示、竞赛汇报，家长与学生反馈良好。','将AI编程与PPT制作技能结合，为补习班和音乐机构设计自动化宣传物料，提升工作效率约40%。','通过在线课程与社区学习持续精进，形成“AI+编程+演示”的复合技能闭环。'],result:'产出可复用的AI工具与PPT模板，被社区成员广泛采用。',tags:['AI编程','Python','PPT设计','自动化']}],skills:[{category:'AI 应用与工具链',items:['ChatGPT','文心一言','通义千问','AI辅助设计','AI辅助文案','AI辅助教学'],strong:['ChatGPT','文心一言','通义千问']},{category:'编程与数据',items:['Python','SQL基础','机器学习概念','CNN/RNN/Transformer'],strong:['Python']},{category:'艺术与表达',items:['钢琴演奏','吉他演奏','声乐表演','舞台表现'],strong:['钢琴','吉他','声乐']},{category:'运营与管理',items:['招生宣传','客户沟通','团队协调','财务管理','AI赋能运营'],strong:['招生宣传','客户沟通']},{category:'办公与演示',items:['PPT演示设计','Office办公套件','Word文档排版','Excel数据分析','AI辅助演示'],strong:['PPT演示设计','Office办公套件']},{category:'其他工具',items:['AI辅助设计工具','数据分析报表'],strong:[]}],certGroups:[{name:'Datawhale 学习认证',issuer:'Datawhale',year:'2026',textItems:['Datawhale AI 学习认证'],images:['4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.png','10.jpg'],icon:'🐳'},{name:'华为云微认证',issuer:'华为云',year:'2026',textItems:['华为云微认证（已通过）'],images:['1.png','2.png','3.png','11.jpg'],icon:'☁️'},{name:'阿里云 AI 认证',issuer:'阿里云',year:'2026',textItems:['阿里云 AI 助理工程师认证'],images:['16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg'],icon:'☁️'},{name:'科大讯飞 AI 认证',issuer:'科大讯飞',year:'2026',textItems:['科大讯飞 AI 开发认证'],images:['12.jpg','13.jpg','14.jpg','15.jpg'],icon:'🎤'},{name:'音乐获奖证书',issuer:'省/市级赛事',year:'2025',textItems:['省级声乐比赛一等奖','市级乐器比赛一等奖（钢琴/吉他）'],images:['微信图片_20260816133921_48_2.jpg','微信图片_20260816133923_49_2.jpg'],icon:'🎵'},{name:'竞赛证书',issuer:'相关赛事',year:'2026',textItems:['计算机竞赛获奖证书'],images:['计算机.jpg'],icon:'🏅'}]};
+const main=document.getElementById('mainContent');const themeToggle=document.getElementById('themeToggle');const printBtn=document.getElementById('printBtn');const backToTop=document.getElementById('backToTop');const copyToast=document.getElementById('copyToast');const lightboxOverlay=document.getElementById('lightboxOverlay');const lightboxImg=document.getElementById('lightboxImg');const lightboxClose=document.getElementById('lightboxClose');const htmlEl=document.documentElement;
+function getTheme(){const s=localStorage.getItem('resume-theme');if(s==='light'||s==='dark')return s;return matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}
+function applyTheme(t){if(t==='dark'){htmlEl.setAttribute('data-theme','dark')}else{htmlEl.setAttribute('data-theme','light')}localStorage.setItem('resume-theme',t);themeToggle.textContent=t==='dark'?'☀️':'🌓'}
+themeToggle.addEventListener('click',()=>{applyTheme(getTheme()==='dark'?'light':'dark')});applyTheme(getTheme());
+function showLightbox(src,alt){lightboxImg.src=src;lightboxImg.alt=alt||'图片预览';lightboxOverlay.classList.add('active');lightboxOverlay.setAttribute('aria-hidden','false');lightboxClose.focus()}
+function hideLightbox(){lightboxOverlay.classList.remove('active');lightboxOverlay.setAttribute('aria-hidden','true');lightboxImg.src=''}
+lightboxClose.addEventListener('click',hideLightbox);lightboxOverlay.addEventListener('click',e=>{if(e.target===lightboxOverlay)hideLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lightboxOverlay.classList.contains('active'))hideLightbox()});
+function buildHero(){const s=document.createElement('section');s.className='hero-section';s.id='hero';s.innerHTML=`<div class="hero-content"><div class="hero-avatar-row"><div class="hero-avatar"><img src="${resume.avatar}" alt="王德轩头像" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.textContent='王'"></div><div class="hero-name-block"><h1>${resume.name}</h1><p class="hero-subtitle">${resume.title} ｜ ${resume.university}</p></div></div><p class="hero-bio">${resume.bio}</p><div class="hero-badges">${['AI应用','Python','PPT演示','钢琴','吉他','声乐','运营管理','创业经验','5+AI认证'].map(b=>`<span class="badge">${b}</span>`).join('')}<span class="badge accent">省级一等奖</span></div><div class="hero-contact-row"><a href="tel:${resume.phone}" class="btn-contact primary">📞 ${resume.phone}</a><button class="btn-contact" id="heroEmailBtn" data-email-user="${resume.emailUser}" data-email-domain="${resume.emailDomain}">📧 ${resume.emailUser}@${resume.emailDomain}</button><button class="btn-contact" id="douyinBtn" data-img="${resume.douyinImage}">🎵 抖音主页</button></div></div>`;return s}
+function buildHighlights(){const s=document.createElement('section');s.className='section-block';s.id='highlights';s.innerHTML=`<div class="section-heading"><span class="section-icon">✨</span>亮点成果</div><div class="highlights-grid">${resume.highlights.map(h=>`<div class="highlight-card"><span class="hl-icon">${h.icon}</span><div class="hl-value">${h.value}</div><div class="hl-label">${h.label.replace(/\n/g,'<br>')}</div></div>`).join('')}</div>`;return s}
+function buildExpCard(e){return `<div class="card"><div class="card-header"><div><div class="card-title">${e.role}</div><div class="card-subtitle">${e.company}</div></div><span class="card-meta">${e.period}</span></div><ul class="card-list">${e.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>${e.tags?`<div class="card-tags">${e.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`:''}${e.link?`<a class="card-link" href="${e.link}" target="_blank" rel="noopener">📎 项目链接</a>`:''}</div>`}
+function buildExperience(){const s=document.createElement('section');s.className='section-block';s.id='experience';const gid='exp-tabs';const panels=[{id:'tab-work',label:'💼 工作/实习',content:resume.experience.filter(e=>e.type==='work').map(buildExpCard).join('')||'<p style="color:var(--text-tertiary);padding:16px;">暂无工作经历记录</p>'},{id:'tab-campus',label:'🎓 校园/实践',content:resume.experience.filter(e=>e.type==='campus').map(buildExpCard).join('')||'<p style="color:var(--text-tertiary);padding:16px;">暂无校园经历记录</p>'}];s.innerHTML=`<div class="section-heading"><span class="section-icon">💼</span>经历</div><div class="tab-nav" role="tablist" aria-label="经历分类" id="${gid}-nav">${panels.map((p,i)=>`<button class="tab-btn${i===0?' active':''}" role="tab" aria-selected="${i===0}" aria-controls="${p.id}" id="${p.id}-tab" data-panel="${p.id}" data-tabgroup="${gid}">${p.label}</button>`).join('')}</div>${panels.map((p,i)=>`<div class="tab-panel${i===0?' active':''}" role="tabpanel" id="${p.id}" aria-labelledby="${p.id}-tab" data-tabgroup="${gid}">${p.content}</div>`).join('')}`;return s}
+function buildProjects(){const s=document.createElement('section');s.className='section-block';s.id='projects';s.innerHTML=`<div class="section-heading"><span class="section-icon">🚀</span>项目经历</div><div class="projects-grid">${resume.projects.map(p=>`<div class="project-card"><div class="project-card-img" aria-hidden="true">${p.icon||'📁'}</div><div class="project-card-body"><div class="card-title">${p.name}</div><div class="card-subtitle">${p.role} · ${p.period}</div><ul class="card-list" style="margin-bottom:8px;">${p.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>${p.result?`<p style="font-size:.8rem;color:var(--color-accent-dark);font-weight:600;margin:6px 0;">🏆 ${p.result}</p>`:''}<div class="card-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div></div>`).join('')}</div>`;return s}
+function buildSkills(){const s=document.createElement('section');s.className='section-block';s.id='skills';s.innerHTML=`<div class="section-heading"><span class="section-icon">🛠️</span>技能矩阵</div><div class="skills-grid">${resume.skills.map(sk=>`<div class="skill-category"><div class="skill-cat-title">${sk.category}</div><div class="skill-badges">${sk.items.map(item=>{const isStrong=sk.strong&&sk.strong.includes(item);return `<span class="skill-badge${isStrong?' strong':''}">${item}</span>`}).join('')}</div></div>`).join('')}</div>`;return s}
+function buildCertGroupCard(g){const c=document.createElement('div');c.className='cert-group-card';c.innerHTML=`<div class="cert-group-header"><span class="group-icon">${g.icon||'📜'}</span>${g.name}</div><ul class="cert-group-text">${g.textItems.map(t=>`<li>${t} (${g.year})</li>`).join('')}</ul><div class="cert-group-images">${g.images.map(img=>`<div class="cert-img-thumb" data-img="${img}" data-alt="${g.name}" tabindex="0" role="button" aria-label="查看证书图片"><img src="${img}" alt="${g.name}证书" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:1.2rem;\'>📄</div>'"></div>`).join('')}</div>`;c.querySelectorAll('.cert-img-thumb').forEach(t=>{const src=t.getAttribute('data-img');t.addEventListener('click',()=>showLightbox(src,g.name));t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showLightbox(src,g.name)}})});return c}
+function buildEduCert(){const s=document.createElement('section');s.className='section-block';s.id='education-cert';const certTabId='cert-tabs';const eduPanel=`<div class="card"><div class="card-header"><div><div class="card-title">${resume.university}</div><div class="card-subtitle">${resume.college} · ${resume.major} · ${resume.degree}</div></div><span class="card-meta">${resume.period}</span></div><div class="card-tags" style="margin-top:10px;">${resume.courses.map(c=>`<span class="tag">${c}</span>`).join('')}</div></div>`;const certContainer=document.createElement('div');const grid=document.createElement('div');grid.className='cert-group-grid';resume.certGroups.forEach(g=>grid.appendChild(buildCertGroupCard(g)));certContainer.appendChild(grid);const certHTML=certContainer.innerHTML;s.innerHTML=`<div class="section-heading"><span class="section-icon">🎓</span>获奖证书与教育背景</div><div class="tab-nav" role="tablist" aria-label="获奖证书与教育背景" id="${certTabId}-nav"><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-cert" id="tab-cert-tab" data-panel="tab-cert" data-tabgroup="${certTabId}">📜 获奖与证书</button><button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-edu" id="tab-edu-tab" data-panel="tab-edu" data-tabgroup="${certTabId}">🏫 教育背景</button></div><div class="tab-panel active" role="tabpanel" id="tab-cert" aria-labelledby="tab-cert-tab" data-tabgroup="${certTabId}">${certHTML}</div><div class="tab-panel" role="tabpanel" id="tab-edu" aria-labelledby="tab-edu-tab" data-tabgroup="${certTabId}">${eduPanel}</div>`;return s}
+function initTabs(){document.querySelectorAll('.tab-nav').forEach(nav=>{const gid=nav.id.replace('-nav','');const btns=nav.querySelectorAll('.tab-btn');const panels=document.querySelectorAll(`.tab-panel[data-tabgroup="${gid}"]`);btns.forEach(btn=>{btn.addEventListener('click',()=>{const pid=btn.getAttribute('data-panel');activateTab(gid,pid,btns,panels)});btn.addEventListener('keydown',e=>{const idx=Array.from(btns).indexOf(btn);let n=idx;if(e.key==='ArrowRight'){n=(idx+1)%btns.length;e.preventDefault()}else if(e.key==='ArrowLeft'){n=(idx-1+btns.length)%btns.length;e.preventDefault()}if(n!==idx){btns[n].focus();btns[n].click()}})})})}
+function activateTab(gid,pid,btns,panels){btns.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});panels.forEach(p=>p.classList.remove('active'));const tb=Array.from(btns).find(b=>b.getAttribute('data-panel')===pid);const tp=Array.from(panels).find(p=>p.id===pid);if(tb){tb.classList.add('active');tb.setAttribute('aria-selected','true')}if(tp)tp.classList.add('active')}
+function setupEmail(){document.querySelectorAll('[data-email-user]').forEach(b=>b.addEventListener('click',()=>{copyToClipboard(b.getAttribute('data-email-user')+'@'+b.getAttribute('data-email-domain'))}))}
+function setupDouyin(){const b=document.getElementById('douyinBtn');if(b)b.addEventListener('click',()=>showLightbox(b.getAttribute('data-img'),'抖音主页截图'))}
+function copyToClipboard(text){if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>showToast());else{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()}}
+function showToast(){copyToast.classList.add('show');clearTimeout(copyToast._t);copyToast._t=setTimeout(()=>copyToast.classList.remove('show'),1800)}
+function updateBackTop(){if(scrollY>500)backToTop.classList.add('visible');else backToTop.classList.remove('visible')}
+backToTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));addEventListener('scroll',updateBackTop,{passive:true});
+printBtn.addEventListener('click',()=>{const ps=document.querySelectorAll('.tab-panel');const hidden=[];ps.forEach(p=>{if(!p.classList.contains('active')){hidden.push(p);p.classList.add('active')}});print();setTimeout(()=>{hidden.forEach(p=>p.classList.remove('active'));initTabs()},300)});
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link=>{link.addEventListener('click',function(e){e.preventDefault();const id=this.getAttribute('href').substring(1);const el=document.getElementById(id);if(el){const navH=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'))||60;scrollTo({top:el.getBoundingClientRect().top+pageYOffset-navH-16,behavior:'smooth'})}})});
+main.appendChild(buildHero());main.appendChild(buildHighlights());main.appendChild(buildExperience());main.appendChild(buildProjects());main.appendChild(buildSkills());main.appendChild(buildEduCert());initTabs();setupEmail();setupDouyin();updateBackTop();
+})();
+</script>
+</body>
+</html>

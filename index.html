@@ -516,10 +516,10 @@ function buildCertGroupCard(g) {
           <i data-lucide="award" class="absolute left-0 top-[3px] w-3.5 h-3.5 text-cyan-400"></i>${t}
         </li>`).join('')}
     </ul>
-    <div class="cert-img-wrap grid grid-cols-4 sm:grid-cols-6 gap-1.5 sm:gap-2">
+    <div class="cert-img-wrap grid grid-cols-1 gap-3 sm:gap-4 mt-3">
       ${g.images.map(img => `
-        <div class="cert-thumb relative aspect-square rounded-lg overflow-hidden border border-white/10 bg-slate-800 cursor-pointer" data-img="${img}" data-alt="${g.name}" tabindex="0" role="button" aria-label="查看证书图片">
-          <img src="${img}" alt="${g.name}证书" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-lg\\'>📄</div>'">
+        <div class="cert-thumb relative h-40 sm:h-52 rounded-2xl overflow-hidden border border-white/10 bg-slate-800 cursor-pointer shadow-md" data-img="${img}" data-alt="${g.name}" tabindex="0" role="button" aria-label="查看证书图片">
+          <img src="${img}" alt="${g.name}证书" loading="lazy" decoding="async" class="w-full h-full object-contain bg-slate-900 p-1" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-2xl\\'>📄</div>'">
         </div>`).join('')}
     </div>`;
   c.querySelectorAll('.cert-thumb').forEach(t => {

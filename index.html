@@ -56,10 +56,12 @@ body { font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Pin
 .tl-card:hover { transform: translateY(-2px); box-shadow: 0 18px 50px -20px rgba(99, 102, 241, 0.35); border-color: rgba(34, 211, 238, 0.25); }
 .cert-thumb { transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s ease, border-color 0.3s ease; }
 .cert-thumb:hover { transform: scale(1.8); z-index: 50; box-shadow: 0 30px 80px -15px rgba(0,0,0,.8); border-color: rgba(34, 211, 238, 0.5); }
+.qr-thumb { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.qr-thumb:hover { transform: scale(1.3); z-index: 40; box-shadow: 0 20px 60px -10px rgba(0,0,0,.6); border-color: rgba(34, 211, 238, 0.55); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
-  .hl-card:hover, .tl-card:hover, .btn-glow:hover, .cert-thumb:hover { transform: none !important; }
+  .hl-card:hover, .tl-card:hover, .btn-glow:hover, .cert-thumb:hover, .qr-thumb:hover { transform: none !important; }
 }
 @media print {
   @page { margin: 1.2cm; size: A4; }
@@ -176,9 +178,9 @@ const resume = {
     {category:'其他工具',items:['AI辅助设计工具','数据分析报表'],strong:[],icon:'wrench'}
   ],
   certGroups:[
+    {name:'阿里云 AI 认证',issuer:'阿里云',year:'2026',textItems:['阿里云 AI 助理工程师认证'],images:['16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg'],icon:'cloud-cog'},
     {name:'Datawhale 学习认证',issuer:'Datawhale',year:'2026',textItems:['Datawhale AI 学习认证'],images:['4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.png','10.jpg'],icon:'award'},
     {name:'华为云微认证',issuer:'华为云',year:'2026',textItems:['华为云微认证（已通过）'],images:['1.png','2.png','3.png','11.jpg'],icon:'cloud'},
-    {name:'阿里云 AI 认证',issuer:'阿里云',year:'2026',textItems:['阿里云 AI 助理工程师认证'],images:['16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg'],icon:'cloud-cog'},
     {name:'科大讯飞 AI 认证',issuer:'科大讯飞',year:'2026',textItems:['科大讯飞 AI 开发认证'],images:['12.jpg','13.jpg','14.jpg','15.jpg'],icon:'mic'},
     {name:'音乐获奖证书',issuer:'省/市级赛事',year:'2025',textItems:['省级声乐比赛一等奖','市级乐器比赛一等奖（钢琴/吉他）'],images:['微信图片_20260816133921_48_2.jpg','微信图片_20260816133923_49_2.jpg'],icon:'trophy'},
     {name:'竞赛证书',issuer:'相关赛事',year:'2026',textItems:['计算机竞赛获奖证书'],images:['计算机.jpg'],icon:'medal'}
@@ -516,10 +518,10 @@ function buildCertGroupCard(g) {
           <i data-lucide="award" class="absolute left-0 top-[3px] w-3.5 h-3.5 text-cyan-400"></i>${t}
         </li>`).join('')}
     </ul>
-    <div class="cert-img-wrap grid grid-cols-1 gap-3 sm:gap-4 mt-3">
+    <div class="cert-img-wrap grid grid-cols-4 sm:grid-cols-6 gap-1.5 sm:gap-2">
       ${g.images.map(img => `
-        <div class="cert-thumb relative h-40 sm:h-52 rounded-2xl overflow-hidden border border-white/10 bg-slate-800 cursor-pointer shadow-md" data-img="${img}" data-alt="${g.name}" tabindex="0" role="button" aria-label="查看证书图片">
-          <img src="${img}" alt="${g.name}证书" loading="lazy" decoding="async" class="w-full h-full object-contain bg-slate-900 p-1" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-2xl\\'>📄</div>'">
+        <div class="cert-thumb relative aspect-square rounded-lg overflow-hidden border border-white/10 bg-slate-800 cursor-pointer" data-img="${img}" data-alt="${g.name}" tabindex="0" role="button" aria-label="查看证书图片">
+          <img src="${img}" alt="${g.name}证书" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center text-lg\\'>📄</div>'">
         </div>`).join('')}
     </div>`;
   c.querySelectorAll('.cert-thumb').forEach(t => {

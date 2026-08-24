@@ -373,11 +373,11 @@ function buildExpCard(e) {
   const qrHtml = e.images && e.images.length ? `
     <div class="mt-5 pt-4 border-t border-white/5">
       <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5">
-        <i data-lucide="qr-code" class="w-3.5 h-3.5 text-cyan-400/80"></i>扫码直达 · Hover 可放大 · 点击全屏预览
+        <i data-lucide="qr-code" class="w-3.5 h-3.5 text-cyan-400/80"></i>扫码直达 · 点击查看大图
       </p>
       <div class="grid grid-cols-4 sm:grid-cols-4 gap-2 sm:gap-3">
         ${e.images.map((img, idx) => `
-          <div class="qr-thumb cert-thumb relative aspect-square rounded-xl overflow-hidden border border-white/10 bg-slate-800 cursor-pointer shadow-sm"
+          <div class="qr-thumb relative aspect-square rounded-xl overflow-hidden border border-white/10 bg-slate-800 cursor-pointer shadow-sm hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
                data-img="${img}" data-alt="${(e.imageLabels && e.imageLabels[idx]) || '二维码'} · ${img}"
                tabindex="0" role="button" aria-label="查看二维码大图：${(e.imageLabels && e.imageLabels[idx]) || img}">
             <img src="${img}" alt="${(e.imageLabels && e.imageLabels[idx]) || '二维码'}" loading="lazy" decoding="async"
@@ -563,7 +563,7 @@ function buildEduCert() {
     </div>`;
   // 先构建证书网格元素（逐个 append buildCertGroupCard，保留绑定的事件）
   const certGrid = document.createElement('div');
-  certGrid.className = 'grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 animate-fade-slide-in';
+  certGrid.className = 'grid grid-cols-1 gap-3 sm:gap-4 animate-fade-slide-in';
   resume.certGroups.forEach(g => certGrid.appendChild(buildCertGroupCard(g)));
   // 构建证书 Tab 面板
   const certPanel = document.createElement('div');
